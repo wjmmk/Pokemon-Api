@@ -22,9 +22,7 @@ export class DetailsComponent implements OnInit {
     this.route.paramMap.subscribe( params => {
       if(params.has('id')){
         this.listpokemon.getPokemonId(parseInt(params.get('id'))).subscribe(
-          //(data: any) => console.log( data.id )
-           //console.log(data.id)
-           result => {  this.listpokemon.getPokemonId(result.id).subscribe(
+           (result: any) => {  this.listpokemon.getPokemonId(result.id).subscribe(
             (data: any) => console.log(data)
           )
          } 
