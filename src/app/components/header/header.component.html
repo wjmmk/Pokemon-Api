@@ -1,5 +1,12 @@
 <mat-toolbar>
     <mat-toolbar-row>
         <img src="../../../assets/images/Pikachu.png" alt="" width="40" height="40" (click)="card">
+
+        <button mat-button [matMenuTriggerFor]="aboveMenu" style="flex: 1 1 auto;">!!! Pokemons App ~ The Adventure !!!</button>
+        <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+        </mat-menu>
+
     </mat-toolbar-row>
 </mat-toolbar>

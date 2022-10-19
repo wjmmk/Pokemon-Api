@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ConsultarApiService } from 'src/app/services/consultar-api.service';
 import { pokemon }  from '../../shared/interface/pokemon.interface'
 
@@ -11,6 +11,7 @@ import { pokemon }  from '../../shared/interface/pokemon.interface'
 export class DetailsComponent implements OnInit {
 
   constructor( 
+    private router: Router,
     private route: ActivatedRoute,
     private listpokemon: ConsultarApiService 
     ) { }
@@ -19,13 +20,14 @@ export class DetailsComponent implements OnInit {
 
 
   ngOnInit(): any {
-    this.route.paramMap.subscribe( params => {
-      if(params.has('id')){
+    this.route.paramMap.subscribe(params => {
+      if (params.has('id')) {
         this.listpokemon.getPokemonId(parseInt(params.get('id'))).subscribe(
-           (result: any) => {  this.listpokemon.getPokemonId(result.id).subscribe(
-            (data: any) => console.log(data)
-          )
-         } 
+          (result: any) => {
+            this.listpokemon.getPokemonId(result.id).subscribe(
+              (data: any) => console.log(data)
+            )
+          }
         )
       }
     })

@@ -5,5 +5,6 @@ export interface pokemon {
     ability: string,
     attack: string,
     speciality: string,
-    defency: string
+    defency: string,
+    url: string
 }
