@@ -20,7 +20,6 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPokemonList();
-    /* console.log(this.GlobalListPokemon) */
     this.listpokemon.getPokemonList().subscribe(
       (pokemonId: any) => this.PokemonToDiscovery = pokemonId   
     )

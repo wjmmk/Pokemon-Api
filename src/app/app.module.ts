@@ -9,8 +9,8 @@ import { CardComponent } from './components/card-list/card.component';
 import { DetailsComponent } from './components/card-details/details.component';
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConsultarApiService } from './services/consultar-api.service';
 import { SharedModule } from './shared/shared.module';
-import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 
 @NgModule({
   declarations: [
@@ -19,17 +19,16 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
     HeaderComponent,
     CardComponent,
     DetailsComponent,
-    LoginComponent,
-    PokemonListComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
     SharedModule
   ],
-  providers: [],
+  providers: [ConsultarApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

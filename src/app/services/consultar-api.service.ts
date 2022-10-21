@@ -15,7 +15,7 @@ export class ConsultarApiService {
     return this.http.get<any[]>(`${this.baseUrl}/pokemon`);
   }
 
-  getPokemonId(id: number): any {
+  getPokemonId(id: number | string): any {
     return this.http.get<any>(`${this.baseUrl}/pokemon/${id}`);
   }
 }
