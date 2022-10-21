@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { CardComponent } from './components/card/card.component';
-import { DetailsComponent } from './components/details/details.component';
+import { CardComponent } from './components/card-list/card.component';
+import { DetailsComponent } from './components/card-details/details.component';
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SharedModule } from './shared/shared.module';
     HeaderComponent,
     CardComponent,
     DetailsComponent,
-    LoginComponent
+    LoginComponent,
+    PokemonListComponent
   ],
   imports: [
     BrowserModule,
