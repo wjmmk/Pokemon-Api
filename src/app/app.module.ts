@@ -7,10 +7,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card-list/card.component';
 import { DetailsComponent } from './components/card-details/details.component';
-import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConsultarApiService } from './services/consultar-api.service';
-import { SharedModule } from './shared/shared.module';
+import { SharedMaterialModule } from './shared/sharedmaterial.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -18,15 +18,15 @@ import { SharedModule } from './shared/shared.module';
     FooterComponent,
     HeaderComponent,
     CardComponent,
-    DetailsComponent,
-    LoginComponent
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedMaterialModule,
+    AuthModule
   ],
   providers: [ConsultarApiService],
   bootstrap: [AppComponent]

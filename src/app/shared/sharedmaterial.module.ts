@@ -45,4 +45,4 @@ import {MatChipsModule} from '@angular/material/chips';
     MatChipsModule
   ]
 })
-export class SharedModule { }
+export class SharedMaterialModule { }

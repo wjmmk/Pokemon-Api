@@ -4,10 +4,11 @@ import { CardComponent } from './components/card-list/card.component';
 import { DetailsComponent } from './components/card-details/details.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: '/auth', pathMatch: 'full'},
+  {path: 'auth', loadChildren: () => import('./auth').then( m => m.AuthModule)},
   {path: 'home', component: CardComponent},
   {path: 'home/details/:id', component: DetailsComponent},
-  {path: '', pathMatch: 'full', component: CardComponent},
-  {path: '**', pathMatch: 'full', component: CardComponent},
+  {path: '**', redirectTo: '/auth'}
 ];
 
 @NgModule({
