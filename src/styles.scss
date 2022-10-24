@@ -20,8 +20,6 @@ $my-theme: mat.define-light-theme((
 @include mat.core-theme($my-theme);
 
 
-html, body { height: 100% }
-
 :root {
     --dark-cyan: hsl(266, 49%, 76%);
     --very-dark-desaturated: hsl(229, 23%, 23%);
@@ -41,6 +39,9 @@ html, body { height: 100% }
   }
   
   body {
+    position: relative;
+    padding-bottom: 5rem;
+    min-height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
     background-color: var(--dark-cyan);
     background-image: url("../src/assets/images/bg-pattern-bottom.svg"), url("../src/assets/images/bg-pattern-bottom.svg");
@@ -63,7 +64,7 @@ html, body { height: 100% }
 
   .card-pokemon {
     display: grid;
-    margin-top: 20px;
+    margin-top: 80px;
     margin-bottom: 20px;
   }
   
@@ -140,4 +141,12 @@ html, body { height: 100% }
   
   .card-footer-social p {
     letter-spacing: 1px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
   }
