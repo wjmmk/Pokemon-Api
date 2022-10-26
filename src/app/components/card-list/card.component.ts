@@ -40,7 +40,7 @@ export class CardComponent implements OnInit {
   }
 
   goCard(id: any): void {
-    const _id = id +1;
+    const _id = id + 1;
     this.router.navigate(['/home/details', _id])
   }
 

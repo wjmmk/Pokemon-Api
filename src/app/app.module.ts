@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConsultarApiService } from './services/consultar-api.service';
 import { SharedMaterialModule } from './shared/sharedmaterial.module';
 import { AuthModule } from './auth/auth.module';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { AuthModule } from './auth/auth.module';
     SharedMaterialModule,
     AuthModule
   ],
-  providers: [ConsultarApiService],
+  providers: [ConsultarApiService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
