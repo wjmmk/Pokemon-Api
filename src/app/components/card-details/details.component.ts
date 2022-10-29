@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 import { ConsultarApiService } from 'src/app/services/consultar-api.service';
 import { pokemon } from 'src/app/shared/interface/pokemon.interface';
 
